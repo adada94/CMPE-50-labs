@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9F61677F-B2BD-44B2-B0B8-9B35AD0E8B01</string>
+	<string>9B26F2B9-8150-46D8-A793-08BCE32040C5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>C++_Central</string>
+	<string>CMPE50Labs</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F9CB90549F0E11712A7F73397B64EE85F355F84F</key>
 		<string>https://github.com/adisha94/CMPE-50-labs.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>C++_Central.xcodeproj</string>
+	<string>CMPE50Labs/CMPE50Labs.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F9CB90549F0E11712A7F73397B64EE85F355F84F</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/adisha94/CMPE-50-labs.git</string>
