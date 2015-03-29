@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9F61677F-B2BD-44B2-B0B8-9B35AD0E8B01</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AC9D1D5BE5E5DC3DD4876F7A1622899F1FDC5500</key>
+		<string>https://github.com/adisha94/C-_Central.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AC9D1D5BE5E5DC3DD4876F7A1622899F1FDC5500</key>
+		<string>C++_Central/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/adisha94/C-_Central.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AC9D1D5BE5E5DC3DD4876F7A1622899F1FDC5500</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AC9D1D5BE5E5DC3DD4876F7A1622899F1FDC5500</string>
+			<key>IDESourceControlWCCName</key>
+			<string>C++_Central</string>
+		</dict>
+	</array>
+</dict>
+</plist>
