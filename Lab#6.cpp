@@ -19,7 +19,7 @@ public:
     void setStatus(int i);
     int getWriteTo();
     void setWriteTo(int i);
-    void output (ostream &out_stream);
+    void Output(ostream &out_stream);
     friend bool check_status(Resource &resl, Resource &res2);
 };
 
@@ -67,3 +67,7 @@ void Resource::setWriteTo(int i)
     writeTo = i;
 }
 
+void Output(ostream &out_stream)
+{
+    cout << "The current resulting status of the two variables are " << "status: " << status << "writeTO: "
+}
