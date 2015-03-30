@@ -72,7 +72,16 @@ void Resource::Output(ostream &out_stream)
     cout << "The current resulting status of the two variables are " << "status: " <<  status << "writeTO: " << writeTo;
 }
 
-bool Resource::Check_status(Resource &resl, Resource &res2)
+bool Check_status(Resource &res1, Resource &res2)
 {
-    
+    if (res1.GetStatus() == 1 && res2.GetWriteTo() == 1)
+    {
+        cout << "Resource available";
+        return true;
+    }
+    else
+    {
+        cout << "Resource unavailable";
+        return false;
+    }
 }
