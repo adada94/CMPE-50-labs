@@ -16,36 +16,38 @@ public:
     Resource();
     Resource(int writeTo);
     int GetStatus();
-    void SetStatus(int i);
+    void SetStatus();
     int GetWriteTo();
-    void SetWriteTo(int i);
+    void SetWriteTo();
     void Output(ostream &out_stream);
     friend bool Check_status(Resource &resl, Resource &res2);
 };
 
 
 
-// defining default constructor
+// defining default constructor and non-default constructor
 Resource::Resource()
 {
     status = 0;
     writeTo = 0;
 }
 
-int main()
-{
-    Resource resource1;
-    Resource resource2;
-    return 0;
-}
-
-
-// defining other class functions
-
 Resource::Resource(int i)
 {
     writeTo = 1;
 }
+
+int main()
+{
+    Resource res1(1);
+    Resource res2(1);
+    cout << "The status for the private variable for resource is status is: " << res1.GetStatus() << endl;
+    cout << "Now we will set the new value of resource";
+    return 0;
+}
+
+
+// defining other class functions as well as friend function
 
 int Resource::GetStatus()
 {
@@ -57,14 +59,15 @@ int Resource::GetWriteTo()
     return writeTo;
 }
 
-void Resource::SetStatus(int i)
+void Resource::SetStatus() // set restrictions
 {
-    status = i;
+    cout << " Set to 0 or 1";
+    cin >> status;
 }
 
-void Resource::SetWriteTo(int i)
+void Resource::SetWriteTo() // set restrictions
 {
-    writeTo = i;
+    cin >> writeTo;
 }
 
 void Resource::Output(ostream &out_stream)
@@ -74,7 +77,7 @@ void Resource::Output(ostream &out_stream)
 
 bool Check_status(Resource &res1, Resource &res2)
 {
-    if (res1.GetStatus() == 1 && res2.GetWriteTo() == 1)
+    if (res1.GetStatus() == 1 && res2.GetStatus() == 1) // comparing the status of the 'status' and writeTo private variables for similarities.
     {
         cout << "Resource available";
         return true;
