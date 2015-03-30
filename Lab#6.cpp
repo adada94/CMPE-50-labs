@@ -43,6 +43,7 @@ int main()
     Resource res2(1);
     cout << "The status for the private variable for resource is status is: " << res1.GetStatus() << endl;
     cout << "Now we will set the new value of resource";
+    Check_status(res1, res2);
     return 0;
 }
 
