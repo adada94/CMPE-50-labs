@@ -15,12 +15,12 @@ private:
 public:
     Resource();
     Resource(int writeTo);
-    int getStatus();
-    void setStatus(int i);
-    int getWriteTo();
-    void setWriteTo(int i);
+    int GetStatus();
+    void SetStatus(int i);
+    int GetWriteTo();
+    void SetWriteTo(int i);
     void Output(ostream &out_stream);
-    friend bool check_status(Resource &resl, Resource &res2);
+    friend bool Check_status(Resource &resl, Resource &res2);
 };
 
 
@@ -47,27 +47,32 @@ Resource::Resource(int i)
     writeTo = 1;
 }
 
-int Resource::getStatus()
+int Resource::GetStatus()
 {
     return status;
 }
 
-int Resource::getWriteTo()
+int Resource::GetWriteTo()
 {
     return writeTo;
 }
 
-void Resource::setStatus(int i)
+void Resource::SetStatus(int i)
 {
     status = i;
 }
 
-void Resource::setWriteTo(int i)
+void Resource::SetWriteTo(int i)
 {
     writeTo = i;
 }
 
-void Output(ostream &out_stream)
+void Resource::Output(ostream &out_stream)
 {
-    cout << "The current resulting status of the two variables are " << "status: " << status << "writeTO: "
+    cout << "The current resulting status of the two variables are " << "status: " <<  status << "writeTO: " << writeTo;
+}
+
+bool Resource::Check_status(Resource &resl, Resource &res2)
+{
+    
 }
