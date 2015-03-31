@@ -99,14 +99,14 @@ void Resource::SetWriteTo() // set restrictions
 
 void Resource::Outputf1(ostream &out_stream)
 {
-    out_stream << "The current result of the resource values  " << "status: " <<  status << endl;
+    out_stream << "The current result of the first resource value  " << "status: " <<  status << endl;
 
 }
 
 
 void Resource::Outputf2(ostream &out_stream)
 {
-    out_stream << "The current result of the resource values  " << "status: " <<  status << endl;
+    out_stream << "The current result of the second resource values  " << "status: " <<  status << endl;
 }
 
 
