@@ -7,6 +7,7 @@
 //
 
 #include "EaseOfAccesss.h"
+#include <fstream>
 class Resource
 {
 private:
@@ -45,8 +46,8 @@ int main()
     Resource res2(1);
     cout << "The status for the private variable for resource is status is: " << res1.GetStatus() << endl;
     cout << "Now we will set the new value of resource";
-    Check_status(res3, res2);
-    res3.Output(cout);
+    Check_status(res1, res2);
+    res1.Output(cout);
     res2.Output(cout);
     out.close();
     return 0;
