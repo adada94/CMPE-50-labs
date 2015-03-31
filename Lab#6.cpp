@@ -48,7 +48,9 @@ int main()
     cout << "Now we will set the new value of resource";
     Check_status(res1, res2);
     res1.Output(cout);
+    res1.Output(out);
     res2.Output(cout);
+    res2.Output(out);
     out.close();
     return 0;
 }
