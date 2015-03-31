@@ -25,7 +25,7 @@ private:
 public:
     
     // default constructor
-    Rational();
+    Rational(int num, int den);
     
     // member functions]
     void Input(istream& in);
@@ -44,7 +44,7 @@ public:
 
 
 // defining default constructor
-Rational::Rational()
+Rational::Rational(int num, int den)
 {
     numerator = 0;
     denominator = 1;
@@ -57,7 +57,7 @@ int gcd(int n1, int n2); // find greatest common denominator
 
 int main()
 {
-    Rational rash;
+    Rational rash(0,1);
     rash.Input(cin);
     rash.Output(cout);
     return 1;
@@ -97,7 +97,18 @@ void Rational::Output(ostream& out)
 
 bool Equal(Rational& ras1, Rational& ras2)
 {
-    if (ras1)
+    int ratio;
+    ratio = ras1.denominator / ras2.denominator;
+    Rational temp(ras2.numerator * ratio,ras2.denominator * ratio);
+    if ((ras1.denominator == temp.denominator) && (ras1.numerator == temp.numerator))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    
 }
 
 
@@ -106,7 +117,7 @@ bool Equal(Rational& ras1, Rational& ras2)
 // adds the fractions
 Rational Add(Rational& rash1, Rational& rash2)
 {
-    Rational result;
+    Rational result(0,1);
     
     return result;
 }
@@ -115,7 +126,7 @@ Rational Add(Rational& rash1, Rational& rash2)
 // substracts the fractions
 Rational Substract(Rational& rash1, Rational& rash2)
 {
-    Rational result;
+    Rational result(0,1);
     
     return result;
 }
@@ -123,7 +134,7 @@ Rational Substract(Rational& rash1, Rational& rash2)
 // multiplies the fractions
 Rational Multiply(Rational& rash1, Rational& rash2)
 {
-    Rational result;
+    Rational result(0,1);
     
     return result;
 }
@@ -133,7 +144,7 @@ Rational Multiply(Rational& rash1, Rational& rash2)
 // divides the fraction
 Rational Division(Rational& rash1, Rational& rash2)
 {
-    Rational result;
+    Rational result(0,1);
     
     return result;
 }
