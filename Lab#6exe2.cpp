@@ -6,8 +6,13 @@
 //  Copyright (c) 2015 Adish Betawar. All rights reserved.
 //
 
-#include "EaseOfAccesss.h"
+#include <iostream>
 #include <fstream>
+#include <stdlib.h>
+#include <cstdlib>
+#include <unistd.h> // for changing the directory of files
+using namespace std;
+
 /*
  * Exercise 2
  *
@@ -57,6 +62,7 @@ int gcd(int n1, int n2); // find greatest common denominator
 
 int main()
 {
+    cout << "Excercise 2\n\n";
     Rational rash1(0,1);
     Rational rash2(0,1);
     rash1.Input(cin);
@@ -149,6 +155,7 @@ Rational Add(Rational& rash1, Rational& rash2)
     int combinedNum1 = rash1.numerator * rash2.denominator;
     int combinedNum2 = rash2.numerator * rash1.denominator;
     Rational temp(combinedNum1 + combinedNum2, rash1.denominator * rash2.denominator);
+    cout << &temp;
     return temp;
 }
 
@@ -159,6 +166,7 @@ Rational Substract(Rational& rash1, Rational& rash2)
     int combinedNum1 = rash1.numerator * rash2.denominator;
     int combinedNum2 = rash2.numerator * rash1.denominator;
     Rational temp(combinedNum1 - combinedNum2, rash1.denominator * rash2.denominator);
+    cout << &temp;
     return temp;
 }
 
@@ -166,7 +174,7 @@ Rational Substract(Rational& rash1, Rational& rash2)
 Rational Multiply(Rational& rash1, Rational& rash2)
 {
     Rational result(rash1.numerator * rash2.numerator, rash1.denominator * rash2.denominator);
-    
+    cout << &result;
     return result;
 }
 
@@ -176,7 +184,7 @@ Rational Multiply(Rational& rash1, Rational& rash2)
 Rational Division(Rational& rash1, Rational& rash2)
 {
     Rational result(0,1);
-    
+    cout << &result;
     return result;
 }
 
