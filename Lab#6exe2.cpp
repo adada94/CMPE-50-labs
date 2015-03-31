@@ -51,7 +51,8 @@ int gcd(int n1, int n2); // find greatest common denominator
 
 int main()
 {
-    
+    Rational rash;
+    rash.Input(cin);
 }
 
 
@@ -82,48 +83,52 @@ void Rational::Input(istream& in)
 // friend function definitions
 
 
-{
 // adds the fractions
-    Rational Add(Rational& rash1, Rational& rash2)
-    {
-        Rational result;
-        
-        return result;
-    }
+Rational Add(Rational& rash1, Rational& rash2)
+{
+    Rational result;
     
-    
-    //substracts the fractions
-    Rational Substract(Rational& rash1, Rational& rash2)
-    {
-        
-    }
-    
-    // multiplies the fractions
-    Rational Multiply(Rational& rash1, Rational& rash2)
-    {
-        
-    }
-    
-    
-    
-    // divides the fraction
-    Rational Division(Rational& rash1, Rational& rash2)
-    {
-        
-    }
-    
-    // other function definitions
-    int gcd(int n1, int n2)
-    {
-        int temp;
-        while (n2 != 0)
-        {
-            cout << "n2 = " << n2 << endl;
-            temp = n1;
-            n1 = n2;
-            n2 = temp % n2;
-        }
-        return n1;
-    }
-
+    return result;
 }
+
+
+//substracts the fractions
+Rational Substract(Rational& rash1, Rational& rash2)
+{
+    Rational result;
+    
+    return result;
+}
+
+// multiplies the fractions
+Rational Multiply(Rational& rash1, Rational& rash2)
+{
+    Rational result;
+    
+    return result;
+}
+
+
+
+// divides the fraction
+Rational Division(Rational& rash1, Rational& rash2)
+{
+    Rational result;
+    
+    return result;
+}
+
+// other function definitions
+int gcd(int n1, int n2)
+{
+    int temp;
+    while (n2 != 0)
+    {
+        cout << "n2 = " << n2 << endl;
+        temp = n1;
+        n1 = n2;
+        n2 = temp % n2;
+    }
+    return n1;
+}
+
