@@ -49,15 +49,25 @@ public:
 
 
 // other functions
-int gcd(int n1, int n2);
+int gcd(int n1, int n2); // find greatest common denominator
 
 
-// insert main function
+int main()
+{
+    
+}
+
+
+
+
+
 
 // adds the fractions
 Rational Add(Rational& rash1, Rational& rash2)
 {
+    Rational result;
     
+    return result;
 }
 
 
