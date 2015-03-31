@@ -35,8 +35,8 @@ public:
     friend Rational Substract(Rational& rash1, Rational& rash2);
     friend Rational Multiply(Rational& rash1, Rational& rash2);
     friend Rational Division(Rational& rash1, Rational& rash2);
-    friend bool equal(Rational& ras1, Rational& ras2);
-    friend bool less_than(Rational& ras1, Rational& ras2);
+    friend bool Equal(Rational& ras1, Rational& ras2);
+    friend bool Less_than(Rational& ras1, Rational& ras2);
 };
 
 
@@ -59,6 +59,7 @@ int main()
 {
     Rational rash;
     rash.Input(cin);
+    rash.Output(cout);
     return 1;
 }
 
@@ -69,7 +70,7 @@ void Rational::Input(istream& in)
 {
     cout << "Enter number for numerator" << endl;
     in >> numerator;
-    cout << "\nEnter number for denominator. Note that the denominator can never be 0" << endl;
+    cout << "Enter number for denominator. Note that the denominator can never be 0" << endl;
     while (1)
     {
         in >> denominator;
@@ -86,17 +87,18 @@ void Rational::Input(istream& in)
     }
 //    cout << "Numerator: " << numerator << "\nDenominator: " << denominator << endl;
 }
-
-
 void Rational::Output(ostream& out)
 {
-    
+    out << numerator << "/" << denominator << endl;
 }
 
 
 
 
-
+bool Equal(Rational& ras1, Rational& ras2)
+{
+    if (ras1)
+}
 
 
 // friend function definitions

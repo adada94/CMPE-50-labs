@@ -10,5 +10,8 @@
 #define __C___Central__Persona__
 
 #include <stdio.h>
+#include "EaseOfAccesss.h"
+#include "Persona.cpp"
 
+void MakeSpace(int space);
 #endif /* defined(__C___Central__Persona__) */
