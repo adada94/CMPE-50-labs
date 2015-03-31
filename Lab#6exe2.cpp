@@ -7,8 +7,8 @@
 //
 
 #include "EaseOfAccesss.h"
-
-class Rational
-{
-    
-}rational;
+#include <fstream>
+/*
+ * Exercise 1
+ *
+ */

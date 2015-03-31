@@ -6,8 +6,18 @@
 //  Copyright (c) 2015 Adish Betawar. All rights reserved.
 //
 
+#include <iostream>
 #include "EaseOfAccesss.h"
+#include <stdlib.h>
+#include <cstdlib>
 #include <fstream>
+using namespace std;
+
+
+/*
+ * Exercise 1
+ *
+ */
 class Resource
 {
 private:
@@ -42,8 +52,8 @@ int main()
 {
     ofstream out;
     out.open("//users//adish//Desktop//Output.txt");
-    Resource res1(1);
-    Resource res2(1);
+    Resource res1;
+    Resource res2;
     cout << "The status for the private variable for resource is status is: " << res1.GetStatus() << endl;
     cout << "Now we will set the new value of resource";
     Check_status(res1, res2);
@@ -69,30 +79,31 @@ int Resource::GetWriteTo()
 
 void Resource::SetStatus() // set restrictions
 {
-    cout << " Set to 0 or 1";
+    cout << " Set to 0 or 1" << endl;
     cin >> status;
 }
 
 void Resource::SetWriteTo() // set restrictions
 {
+    cout << "Set to 0 or 1" << endl;
     cin >> writeTo;
 }
 
 void Resource::Output(ostream &out_stream)
 {
-    cout << "The current resulting status of the two variables are " << "status: " <<  status << "writeTO: " << writeTo;
+    cout << "The current resulting status of the two variables are " << "status: " <<  status << "writeTO: " << writeTo << endl;
 }
 
 bool Check_status(Resource &res1, Resource &res2)
 {
     if (res1.GetStatus() == 1 && res2.GetStatus() == 1) // comparing the status of the 'status' and writeTo private variables for similarities.
     {
-        cout << "Resource available";
+        cout << "Resource available" << endl;
         return true;
     }
     else
     {
-        cout << "Resource unavailable";
+        cout << "Resource unavailable" << endl;
         return false;
     }
 }
