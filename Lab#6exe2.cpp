@@ -44,6 +44,12 @@ public:
 
 
 // defining default constructor
+Rational::Rational()
+{
+    numerator = 0;
+    denominator = 1;
+}
+
 
 // other functions
 int gcd(int n1, int n2); // find greatest common denominator
@@ -53,6 +59,7 @@ int main()
 {
     Rational rash;
     rash.Input(cin);
+    return 1;
 }
 
 
@@ -69,7 +76,7 @@ void Rational::Input(istream& in)
         // fraction denominator can never be 0
         if (denominator == 0)
         {
-            cout << "Denominator cannot be 0.\n\tTry Again" << endl;
+            cout << "Denominator cannot be 0\n\tTry Again" << endl;
             continue;
         }
         else
@@ -77,11 +84,22 @@ void Rational::Input(istream& in)
             break;
         }
     }
-    cout << "Numerator: " << numerator << "\nDenominator: " << denominator;
+//    cout << "Numerator: " << numerator << "\nDenominator: " << denominator << endl;
 }
 
-// friend function definitions
 
+void Rational::Output(ostream& out)
+{
+    
+}
+
+
+
+
+
+
+
+// friend function definitions
 
 // adds the fractions
 Rational Add(Rational& rash1, Rational& rash2)
@@ -92,7 +110,7 @@ Rational Add(Rational& rash1, Rational& rash2)
 }
 
 
-//substracts the fractions
+// substracts the fractions
 Rational Substract(Rational& rash1, Rational& rash2)
 {
     Rational result;
