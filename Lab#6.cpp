@@ -51,11 +51,15 @@ Resource::Resource(int i)
 int main()
 {
     ofstream out;
-    out.open("//users//adish//Desktop//Output.txt");
+    out.open("//users//adish//Desktop//Output.txt", ios::app);
     Resource res1;
     Resource res2;
-    cout << "The status for the private variable for resource is status is: " << res1.GetStatus() << endl;
-    cout << "Now we will set the new value of resource";
+    
+    cout << "The status for the private variable for status in the first resource object is currently: " << res1.GetStatus() << endl;
+    cout << "The status for the private variable for status in the second resource object is currently: " << res1.GetStatus() << endl;
+    cout << "Now we will set the new value of the two resource instances:" << endl;
+    res1.SetStatus();
+    res2.SetStatus();
     Check_status(res1, res2);
     res1.Output(cout);
     res1.Output(out);
@@ -91,19 +95,20 @@ void Resource::SetWriteTo() // set restrictions
 
 void Resource::Output(ostream &out_stream)
 {
-    cout << "The current resulting status of the two variables are " << "status: " <<  status << "writeTO: " << writeTo << endl;
+    out_stream << "The current result of the two  " << "status: " <<  status << endl;
+
 }
 
 bool Check_status(Resource &res1, Resource &res2)
 {
     if (res1.GetStatus() == 1 && res2.GetStatus() == 1) // comparing the status of the 'status' and writeTo private variables for similarities.
     {
-        cout << "Resource available" << endl;
+        cout << " Resource Available" << endl;
         return true;
     }
     else
     {
-        cout << "Resource unavailable" << endl;
+        cout << " Resource Unavailable" << endl;
         return false;
     }
 }
