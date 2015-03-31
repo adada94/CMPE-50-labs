@@ -30,7 +30,8 @@ public:
     void SetStatus();
     int GetWriteTo();
     void SetWriteTo();
-    void Output(ostream &out_stream);
+    void Outputf1(ostream &out_stream);
+    void Outputf2(ostream &out_stream);
     friend bool Check_status(Resource &resl, Resource &res2);
 };
 
@@ -50,6 +51,7 @@ Resource::Resource(int i)
 
 int main()
 {
+    cout << "Executing Exercise 1" << endl;
     ofstream out;
     out.open("//users//adish//Desktop//Output.txt", ios::app);
     Resource res1;
@@ -58,13 +60,15 @@ int main()
     cout << "The status for the private variable for status in the first resource object is currently: " << res1.GetStatus() << endl;
     cout << "The status for the private variable for status in the second resource object is currently: " << res1.GetStatus() << endl;
     cout << "Now we will set the new value of the two resource instances:" << endl;
+    cout << "res1: ";
     res1.SetStatus();
+    cout << "res2: ";
     res2.SetStatus();
     Check_status(res1, res2);
-    res1.Output(cout);
-    res1.Output(out);
-    res2.Output(cout);
-    res2.Output(out);
+    res1.Outputf1(cout);
+    res1.Outputf1(out);
+    res2.Outputf2(cout);
+    res2.Outputf2(out);
     out.close();
     return 0;
 }
@@ -93,11 +97,18 @@ void Resource::SetWriteTo() // set restrictions
     cin >> writeTo;
 }
 
-void Resource::Output(ostream &out_stream)
+void Resource::Outputf1(ostream &out_stream)
 {
-    out_stream << "The current result of the two  " << "status: " <<  status << endl;
+    out_stream << "The current result of the resource values  " << "status: " <<  status << endl;
 
 }
+
+
+void Resource::Outputf2(ostream &out_stream)
+{
+    out_stream << "The current result of the resource values  " << "status: " <<  status << endl;
+}
+
 
 bool Check_status(Resource &res1, Resource &res2)
 {
