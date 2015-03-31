@@ -39,39 +39,36 @@ public:
     void Input(istream& in);
     void Output(ostream& out);
     // friend functions
-    friend Rational Add();
-    friend Rational Substract();
-    friend Rational Multiply();
-    friend Rational Division();
-    
+    friend Rational Add(Rational &rash1, Rational& rash2);
+    friend Rational Substract(Rational& rash1, Rational& rash2);
+    friend Rational Multiply(Rational& rash1, Rational& rash2);
+    friend Rational Division(Rational& rash1, Rational& rash2);
+    friend bool equal(Rational& ras1, Rational& ras2);
+    friend bool less_than(Rational& ras1, Rational& ras2);
 };
 
 
+// other functions
+int gcd(int n1, int n2);
 
 
-
-int main()
-{
-    
-}
-
-
+// insert main function
 
 // adds the fractions
-Rational Add()
+Rational Add(Rational& rash1, Rational& rash2)
 {
     
 }
 
 
 //substracts the fractions
-Rational Substract()
+Rational Substract(Rational& rash1, Rational& rash2)
 {
     
 }
 
 // multiplies the fractions
-Rational Multiply()
+Rational Multiply(Rational& rash1, Rational& rash2)
 {
     
 }
@@ -79,9 +76,22 @@ Rational Multiply()
 
 
 // divides the fraction
-Rational Division()
+Rational Division(Rational& rash1, Rational& rash2)
 {
     
 }
 
+// other function definitions
 
+int gcd(int n1, int n2)
+{
+    int temp;
+    while (n2 != 0)
+    {
+        cout << "n2 = " << n2 << endl;
+        temp = n1;
+        n1 = n2;
+        n2 = temp % n2;
+    }
+    return n1;
+}
