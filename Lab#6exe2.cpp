@@ -27,14 +27,6 @@ public:
     // default constructor
     Rational();
     
-    // accessors
-    int getNumerator();
-    int getDenominator();
-    
-    // mutators
-    void setNumerator();
-    void setDenominator();
-
     // member functions]
     void Input(istream& in);
     void Output(ostream& out);
@@ -48,6 +40,11 @@ public:
 };
 
 
+
+
+
+// defining default constructor
+
 // other functions
 int gcd(int n1, int n2); // find greatest common denominator
 
@@ -59,49 +56,74 @@ int main()
 
 
 
-
-
-
-// adds the fractions
-Rational Add(Rational& rash1, Rational& rash2)
+// member function definitions
+void Rational::Input(istream& in)
 {
-    Rational result;
-    
-    return result;
-}
-
-
-//substracts the fractions
-Rational Substract(Rational& rash1, Rational& rash2)
-{
-    
-}
-
-// multiplies the fractions
-Rational Multiply(Rational& rash1, Rational& rash2)
-{
-    
-}
-
-
-
-// divides the fraction
-Rational Division(Rational& rash1, Rational& rash2)
-{
-    
-}
-
-// other function definitions
-
-int gcd(int n1, int n2)
-{
-    int temp;
-    while (n2 != 0)
+    cout << "Enter number for numerator" << endl;
+    in >> numerator;
+    cout << "\nEnter number for denominator. Note that the denominator can never be 0" << endl;
+    while (1)
     {
-        cout << "n2 = " << n2 << endl;
-        temp = n1;
-        n1 = n2;
-        n2 = temp % n2;
+        in >> denominator;
+        // fraction denominator can never be 0
+        if (denominator == 0)
+        {
+            cout << "Denominator cannot be 0.\n\tTry Again" << endl;
+            continue;
+        }
+        else
+        {
+            break;
+        }
     }
-    return n1;
+    cout << "Numerator: " << numerator << "\nDenominator: " << denominator;
+}
+
+// friend function definitions
+
+
+{
+// adds the fractions
+    Rational Add(Rational& rash1, Rational& rash2)
+    {
+        Rational result;
+        
+        return result;
+    }
+    
+    
+    //substracts the fractions
+    Rational Substract(Rational& rash1, Rational& rash2)
+    {
+        
+    }
+    
+    // multiplies the fractions
+    Rational Multiply(Rational& rash1, Rational& rash2)
+    {
+        
+    }
+    
+    
+    
+    // divides the fraction
+    Rational Division(Rational& rash1, Rational& rash2)
+    {
+        
+    }
+    
+    // other function definitions
+    int gcd(int n1, int n2)
+    {
+        int temp;
+        while (n2 != 0)
+        {
+            cout << "n2 = " << n2 << endl;
+            temp = n1;
+            n1 = n2;
+            n2 = temp % n2;
+        }
+        return n1;
+    }
+
 }
