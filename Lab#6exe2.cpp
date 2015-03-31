@@ -57,9 +57,38 @@ int gcd(int n1, int n2); // find greatest common denominator
 
 int main()
 {
-    Rational rash(0,1);
-    rash.Input(cin);
-    rash.Output(cout);
+    Rational rash1(0,1);
+    Rational rash2(0,1);
+    rash1.Input(cin);
+    rash1.Output(cout);
+    rash2.Input(cin);
+    rash2.Output(cout);
+    int option;
+    while(1)
+    {
+        cout << "select option: \n" << "1. Add\t\t 2. Substract\t\t 3. Multiply\t\t 4. Divide\t\t 5. End Program" << endl;
+        cin >> option;
+        if (option == 1)
+        {
+            Add(rash1, rash2);
+            continue;
+        }
+        if (option == 2)
+        {
+            Substract(rash1, rash2);
+            continue;
+        }
+        if (option == 3)
+        {
+            Multiply(rash1, rash2);
+            continue;
+        }
+        if(option == 5)
+        {
+            break;
+        }
+    }
+    
     return 1;
 }
 
@@ -117,24 +146,26 @@ bool Equal(Rational& ras1, Rational& ras2)
 // adds the fractions
 Rational Add(Rational& rash1, Rational& rash2)
 {
-    Rational result(0,1);
-    
-    return result;
+    int combinedNum1 = rash1.numerator * rash2.denominator;
+    int combinedNum2 = rash2.numerator * rash1.denominator;
+    Rational temp(combinedNum1 + combinedNum2, rash1.denominator * rash2.denominator);
+    return temp;
 }
 
 
 // substracts the fractions
 Rational Substract(Rational& rash1, Rational& rash2)
 {
-    Rational result(0,1);
-    
-    return result;
+    int combinedNum1 = rash1.numerator * rash2.denominator;
+    int combinedNum2 = rash2.numerator * rash1.denominator;
+    Rational temp(combinedNum1 - combinedNum2, rash1.denominator * rash2.denominator);
+    return temp;
 }
 
 // multiplies the fractions
 Rational Multiply(Rational& rash1, Rational& rash2)
 {
-    Rational result(0,1);
+    Rational result(rash1.numerator * rash2.numerator, rash1.denominator * rash2.denominator);
     
     return result;
 }
