@@ -39,17 +39,21 @@ Resource::Resource(int i)
 
 int main()
 {
+    ofstream out;
+    out.open("//users//adish//Desktop//Output.txt");
     Resource res1(1);
     Resource res2(1);
     cout << "The status for the private variable for resource is status is: " << res1.GetStatus() << endl;
     cout << "Now we will set the new value of resource";
-    Check_status(res1, res2);
+    Check_status(res3, res2);
+    res3.Output(cout);
+    res2.Output(cout);
+    out.close();
     return 0;
 }
 
 
 // defining other class functions as well as friend function
-
 int Resource::GetStatus()
 {
     return status;
