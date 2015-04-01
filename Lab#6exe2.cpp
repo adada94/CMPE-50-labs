@@ -184,7 +184,8 @@ Rational Multiply(Rational& rash1, Rational& rash2)
 // divides the fraction
 Rational Division(Rational& rash1, Rational& rash2)
 {
-    Rational result(0,1);
+    // (a * d) '/' (b * c)
+    Rational result(rash1.numerator * rash2.denominator,1);
     cout << &result;
     return result;
 }
