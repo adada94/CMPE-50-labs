@@ -10,8 +10,8 @@
 #define __C___Central__Persona__
 
 #include <stdio.h>
-#include "EaseOfAccesss.h"
 #include "Persona.cpp"
 
 void MakeSpace(int space);
+void Swapv2(int& a, int& b);
 #endif /* defined(__C___Central__Persona__) */

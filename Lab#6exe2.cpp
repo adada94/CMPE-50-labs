@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <cstdlib>
 #include <unistd.h> // for changing the directory of files
+#include "Persona.h"
 using namespace std;
 
 /*
