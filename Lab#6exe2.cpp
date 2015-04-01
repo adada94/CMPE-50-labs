@@ -10,7 +10,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include <cstdlib>
-#include <unistd.h> // for changing the directory of files
+#include <unistd.h>
 #include "Persona.h"
 using namespace std;
 
@@ -155,9 +155,9 @@ Rational Add(Rational& rash1, Rational& rash2)
 {
     int combinedNum1 = rash1.numerator * rash2.denominator;
     int combinedNum2 = rash2.numerator * rash1.denominator;
-    Rational temp(combinedNum1 + combinedNum2, rash1.denominator * rash2.denominator);
-    cout << &temp;
-    return temp;
+    Rational sum(combinedNum1 + combinedNum2, rash1.denominator * rash2.denominator);
+    sum.Output(cout);
+    return sum;
 }
 
 
@@ -166,17 +166,17 @@ Rational Substract(Rational& rash1, Rational& rash2)
 {
     int combinedNum1 = rash1.numerator * rash2.denominator;
     int combinedNum2 = rash2.numerator * rash1.denominator;
-    Rational temp(combinedNum1 - combinedNum2, rash1.denominator * rash2.denominator);
-    cout << &temp;
-    return temp;
+    Rational difference(combinedNum1 - combinedNum2, rash1.denominator * rash2.denominator);
+    difference.Output(cout);
+    return difference;
 }
 
 // multiplies the fractions
 Rational Multiply(Rational& rash1, Rational& rash2)
 {
-    Rational result(rash1.numerator * rash2.numerator, rash1.denominator * rash2.denominator);
-    cout << &result;
-    return result;
+    Rational product(rash1.numerator * rash2.numerator, rash1.denominator * rash2.denominator);
+        product.Output(cout);
+    return product;
 }
 
 
@@ -185,9 +185,10 @@ Rational Multiply(Rational& rash1, Rational& rash2)
 Rational Division(Rational& rash1, Rational& rash2)
 {
     // (a * d) '/' (b * c)
-    Rational result(rash1.numerator * rash2.denominator,1);
-    cout << &result;
-    return result;
+    Rational quotient(rash1.numerator * rash2.denominator, rash1.denominator * rash2.denominator);
+        quotient.Output(cout);
+    return quotient;
+    
 }
 
 // other function definitions
