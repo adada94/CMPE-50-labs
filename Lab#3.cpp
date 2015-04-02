@@ -23,7 +23,7 @@
 //int index_of_smallest(const int a[], int start_index, int number_used);
 //int index_of_largest(const int a[], int start_index, int number_used);
 //
-//int main()
+//int main1()
 //{
 //    ifstream exe1In; // reading from the file
 //    
@@ -82,62 +82,62 @@
 //    
 //    for(int i = 0; i < lineCount; i++)
 //    {
-//     //
+//
 //     // 6a.) Write the uppercase char into the output file.
 //        exe1Out << (char)toupper(charArray[i]);  // writing to the output file
 //        cout << (char)toupper(charArray[i]);    // displaying output for the user
 //    }
 //    cout << "\nArray has been outputted to the file (sample.txt)" << "\n";
 //    
-//    //
+//
 //    // 7. Close output file
 //    exe1Out.close();
 //    
 //    
 //    
 //    
-//    /*
-//     * Excercise 2:
-//        1. Give option to user for inputting the list of integers
-//            a.) OPTION 1: read from keyboard
-//            b.) OPTION 2: read from a file
-//        2. If the user selects first option (keyboard)
-//            a.) Ask user to input the integers manually
-//        3. If the user selects second option (file)
-//            a.) Prompt the user for the file name
-//            b.) Attempt to open the input file and test for failure
-//            c.) Read the information from the input file
-//            d.) close the input file
-//        4. Sort list of integers array
-//        5. Iterate through the integer list
-//            a.) check if the current integer value is present in the uniqueIntArray (make new array)
-//                i) if not present, then add it
-//        6. iterate through the uniqueIntArray
-//            a.) iterate through the user input integer list
-//                i) if numbers are same
-//                ii) increment count
-//            b.) save counter in repeatCounterArray (makeNewArray)
-//     
-//     
-//        7. Open file stream to output report and test for failure
-//            a. make two columns that does the following line by line
-//                i) first column shows one occurance of integer (from uniqueIntArray)
-//                ii) second column shows repeat count (from repeatCountArray)
-//            b. iterate through uniqueIntArray to print report.
-//
-//     */
-//    
+////    /*
+////     * Excercise 2:
+////        1. Give option to user for inputting the list of integers
+////            a.) OPTION 1: read from keyboard
+////            b.) OPTION 2: read from a file
+////        2. If the user selects first option (keyboard)
+////            a.) Ask user to input the integers manually
+////        3. If the user selects second option (file)
+////            a.) Prompt the user for the file name
+////            b.) Attempt to open the input file and test for failure
+////            c.) Read the information from the input file
+////            d.) close the input file
+////        4. Sort list of integers array
+////        5. Iterate through the integer list
+////            a.) check if the current integer value is present in the uniqueIntArray (make new array)
+////                i) if not present, then add it
+////        6. iterate through the uniqueIntArray
+////            a.) iterate through the user input integer list
+////                i) if numbers are same
+////                ii) increment count
+////            b.) save counter in repeatCounterArray (makeNewArray)
+////     
+////     
+////        7. Open file stream to output report and test for failure
+////            a. make two columns that does the following line by line
+////                i) first column shows one occurance of integer (from uniqueIntArray)
+////                ii) second column shows repeat count (from repeatCountArray)
+////            b. iterate through uniqueIntArray to print report.
+////
+////     */
+////    
 //    cout << "\n\nExcercise 2: \n";
 //    
 //    ifstream exe2In;
 //    ofstream exe2Out;
 //
 //    //
-//    /*
-//     1. Give option to user for inputting the list of integers
-//     a.) OPTION 1: read from keyboard
-//     b.) OPTION 2: read from a file
-//     */
+////    /*
+////     1. Give option to user for inputting the list of integers
+////     a.) OPTION 1: read from keyboard
+////     b.) OPTION 2: read from a file
+////     */
 //    int option;
 //    
 //    const int numElements = 50;
@@ -420,37 +420,37 @@
 //
 //
 //
-///*
-// Excercise 1:
-// The input file used is (LabInput3-1.txt) from the desktop.
-// HELLOCMPECLASS 
-//Array has been outputted to the file (sample.txt)
-//
-//
-//Excercise 2:
-//Select method of inputting integer lists.
-//
-//1. Keyboard			2. File
-//
-//1
-//Reading from keyboard
-//23 34 45 5 4 5 4 4 4 3 2 2 1 -1
-//Output of the formatted report:
-//N       Count
-//45         1
-//34         1
-//23         1
-//5         2
-//4         4
-//3         1
-//2         2
-//1         1
-//
-//
-//
-//
-//Excercise 3:
-//Printing required merged file report
-//12 2  3   4    4     5      6       6       45        56
-//Program ended with exit code: 0
-//*/
+/////*
+//// Excercise 1:
+//// The input file used is (LabInput3-1.txt) from the desktop.
+//// HELLOCMPECLASS 
+////Array has been outputted to the file (sample.txt)
+////
+////
+////Excercise 2:
+////Select method of inputting integer lists.
+////
+////1. Keyboard			2. File
+////
+////1
+////Reading from keyboard
+////23 34 45 5 4 5 4 4 4 3 2 2 1 -1
+////Output of the formatted report:
+////N       Count
+////45         1
+////34         1
+////23         1
+////5         2
+////4         4
+////3         1
+////2         2
+////1         1
+////
+////
+////
+////
+////Excercise 3:
+////Printing required merged file report
+////12 2  3   4    4     5      6       6       45        56
+////Program ended with exit code: 0
+////*/
