@@ -40,7 +40,7 @@ void printLine(int times, char symbol)
 //    num1 = num2;
 //}
 
-// swap functino without using a temp variable
+// swap function without using a temp variable
 void Swapv2(int& a, int& b)
 {
     a = a ^ b;

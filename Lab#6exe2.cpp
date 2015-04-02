@@ -22,7 +22,6 @@ using namespace std;
 // class used for rational numbers
 class Rational
 {
-
 private:
 
     int numerator;
@@ -193,7 +192,14 @@ Rational Multiply(Rational& rash1, Rational& rash2)
 // divides the fractions
 Rational Divide(Rational& rash1, Rational& rash2)
 {
-    // (a * d) '/' (b * c)
+    /* thought process for fraction division
+     (a * d) '/' (b * c)
+    
+    1/3 / 2/3
+     *     =    1/3 * 3/2
+     *     =    1/2
+                    RUDIMENTARY PROCEDURE
+     */
     Rational quotient(rash1.numerator * rash2.denominator, rash1.denominator * rash2.denominator);
         quotient.Output(cout);
     return quotient;
@@ -201,7 +207,7 @@ Rational Divide(Rational& rash1, Rational& rash2)
 }
 
 // other function definitions
-int gcd(int n1, int n2)
+int gcd(int n1, int n2) // greatest common denominator
 {
     int temp;
     while (n2 != 0)
