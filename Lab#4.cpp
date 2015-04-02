@@ -1,10 +1,10 @@
-////
-////  Lab#4.cpp
-////  C++_Central
-////
-////  Created by Adish Betawar on 3/29/15.
-////  Copyright (c) 2015 Adish Betawar. All rights reserved.
-////
+//
+//  Lab#4.cpp
+//  C++_Central
+//
+//  Created by Adish Betawar on 3/29/15.
+//  Copyright (c) 2015 Adish Betawar. All rights reserved.
+//
 //
 //#include "EaseOfAccesss.h"
 //
@@ -18,23 +18,23 @@
 //    "\n" \
 //    "\n" \
 //    "   ThE  CounTRY.\n";
-//    
+//
 //    char formatted_message[121]; // is this allowed?
 //    int length = strlen(message);
 //    bool space_Check = false; // checkking for whitespaces in the string
 //    bool case_Check = true; // checking for wether the character is capitalized or not
-//    
+//
 //    cout << "Excercise 1\n\n\n";
-//    
+//
 //    for (int i = 0; i < length; i++) // reading through the string for formatting
 //    {
-//        
+//
 //    }
-//    
-//    
-//    
-//    
-//    
+//
+//
+//
+//
+//
 //}
 //
 //
@@ -59,7 +59,7 @@
 ////bool is_firstblank = false; // Used for the compressing consecutive whitespaces
 ////bool is_initial = true; // Used for removing the leading whitespaces
 ////
-////// Read in all character and change all characters to lowercase and compress
+// Read in all character and change all characters to lowercase and compress
 ////// consecutive whitespaces to a single blank.
 ////for (int i = 0; i < length; i++)
 ////{

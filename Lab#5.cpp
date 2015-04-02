@@ -6,11 +6,16 @@
 //  Copyright (c) 2015 Adish Betawar. All rights reserved.
 //
 
-
-#include "EaseOfAccesss.h"
 #include <fstream>
+#include <iostream>
+#include <stdlib.h>
+#include <cstdlib>
+#include <unistd.h> // for changing the directory of files
+#include <string>
+using namespace std;
+
 /*
-    Excercise 2
+ Excercise 2
  */
 
 
@@ -18,38 +23,44 @@ class CounterType
 {
 public:
     CounterType(); // default constructor
-    CounterType(int i);
-    void increment(void);
-    void decrement(void);
-    int get_Counter();
-    void set_Counter(int i);
-    void FileWrite(ofstream &write, int value);
+    CounterType(int i); //non default constructor
+    void increment(); // incrementing count value
+    void decrement(); // decrementing count value
+    int get_Counter(); // getter (accessor function)
+    void FileWrite(ofstream &write); // (IO file print function)
 private:
     int counter;
 };
 
-CounterType::CounterType()
+
+CounterType::CounterType() // defining default constructor
 {
     counter = 0;
 }
 
-CounterType::CounterType(int i)
+CounterType::CounterType(int i) // defining default constructor
 {
     counter = i;
 }
 
-void CounterType::increment(void)
+void CounterType::increment() // definning increment function. Purpose of function is to
 {
     counter++;
+    cout << "\n The value of counter is now: " << counter << "\n\n";
+    
 }
 
-void CounterType::decrement(void)
+void CounterType::decrement()
 {
-    counter--;
-    if (counter < 0)
+    
+    if (counter == 0)
     {
-        cout << "Value of counter cannot be -1";
-        counter = 0;
+        cout << "We cannot decrement further" << endl;
+    }
+    else
+    {
+        counter--;
+        cout << "\n The value of counter is now: " << counter << "\n\n";
     }
 }
 
@@ -58,30 +69,28 @@ int CounterType::get_Counter()
     return counter;
 }
 
-void CounterType::set_Counter(int i)
+
+
+
+void CounterType::FileWrite(ofstream &write)
 {
-    counter = i;
+    write << "\n" << "The value for counter is now printed to the file. \n The value for counter is: ---------------> " << counter;
+}
+void ScreenPrint(ostream &out)
+{
+    out << " ";
 }
 
-
-
-
-
-void CounterType::FileWrite(ofstream &write, int value)
+int main5()
 {
-    write << "\n" << "The value for counter is now printed to the file. \n The value for counter is: ---------------> " << value;
-}
-
-int main()
-{
-    CounterType main(1);
     ofstream out;
     int option;
-    int 
+    int value;
     cout << "Enter non-default value for the constructor: ";
     cin >> value;
+    CounterType director(value);
     cout << "\n";
-    while(1)
+    while(option != 5)
     {
         cout << "Choose an option to perform: " << "\n\t1. Access counter" << "\n\t2. Increment Counter" << "\n\t3. Decrement Counter" << "\n\t4. Write to File" << "\n\t5. Exit Program";
         cin >> option;
@@ -94,29 +103,30 @@ int main()
         else if(option == 2)
         {
             printf("\nValue Incremented\n");
-            main.increment();
-            cout << "\n The value of counter is now: " << value << "\n\n";
+            director.increment();
             continue;
         }
         else if(option == 3)
         {
             printf("\nValue Decremented\n");
-            main.decrement();
-            cout << "\n The value of counter is now: " << value << "\n\n";
+            director.decrement();
             continue;
         }
         else if(option == 4)
         {
-            printf("\nValue writtent to counter.txt\n");
+            printf("\nValue written to counter.txt\n");
             out.open("//users//adish//desktop//counter.txt", ios::app);
             out << "File updated: \n";
-            main.FileWrite(out, value);
+            director.FileWrite(out);
             out.close();
             continue;
         }
-        else if(option == 5)
-        {
-            break;
-        }
     }
+    return 0;
 }
+
+
+/*
+ 
+ 
+ */

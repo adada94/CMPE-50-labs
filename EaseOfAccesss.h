@@ -15,10 +15,10 @@ using namespace std;
 #include <fstream>
 #include <stdlib.h>
 #include <cstdlib>
-#include <unistd.h> // for changing the directory of files
-//#include <cstring>
-//#include <string>
-//#include <cctype>
+#include <unistd.h>
+#include <cstring>
+#include <string>
+#include <cctype>
 
 
 #endif

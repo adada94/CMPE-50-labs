@@ -26,7 +26,7 @@
 //int main1()
 //{
 //    ifstream exe1In; // reading from the file
-//    
+//
 //    const int MAX_LINES_FILE = 512;
 //    /*
 //     * Excercise 1
@@ -44,7 +44,7 @@
 //    // 1. Display location of input file
 //    cout << "Excercise 1: \n";
 //    cout << "The input file used is (LabInput3-1.txt) from the desktop.\n";
-// 
+//
 //    //
 //    // 2. Open the input file and check error for opening the the file
 //    exe1In.open("//users//adish//desktop//LabInput3-1.txt");
@@ -66,7 +66,7 @@
 //    //
 //    // 4. Close the input file once we reach the end of the file
 //    exe1In.close();
-//    
+//
 //    //
 //    // 5. Open output file for writing and check error for opening the file
 //    ofstream exe1Out;
@@ -79,7 +79,7 @@
 //    }
 //    //
 //    // 6. Iterate through the input char array
-//    
+//
 //    for(int i = 0; i < lineCount; i++)
 //    {
 //
@@ -88,14 +88,14 @@
 //        cout << (char)toupper(charArray[i]);    // displaying output for the user
 //    }
 //    cout << "\nArray has been outputted to the file (sample.txt)" << "\n";
-//    
+//
 //
 //    // 7. Close output file
 //    exe1Out.close();
-//    
-//    
-//    
-//    
+//
+//
+//
+//
 ////    /*
 ////     * Excercise 2:
 ////        1. Give option to user for inputting the list of integers
@@ -117,8 +117,8 @@
 ////                i) if numbers are same
 ////                ii) increment count
 ////            b.) save counter in repeatCounterArray (makeNewArray)
-////     
-////     
+////
+////
 ////        7. Open file stream to output report and test for failure
 ////            a. make two columns that does the following line by line
 ////                i) first column shows one occurance of integer (from uniqueIntArray)
@@ -126,9 +126,9 @@
 ////            b. iterate through uniqueIntArray to print report.
 ////
 ////     */
-////    
+////
 //    cout << "\n\nExcercise 2: \n";
-//    
+//
 //    ifstream exe2In;
 //    ofstream exe2Out;
 //
@@ -139,7 +139,7 @@
 ////     b.) OPTION 2: read from a file
 ////     */
 //    int option;
-//    
+//
 //    const int numElements = 50;
 //    int userIntegerArray[numElements]; // array 1
 //    int uniqueIntegerArray[numElements]; // array 2
@@ -162,13 +162,13 @@
 //            userIntCount++;
 //        }
 //    }
-//    
+//
 //    else if (option == 2)
 //    {
 //        cout << "Reading from file\n";
 //        chdir("//users//adish//desktop");
 //        cout << "Specify file. Please include the ";
-//        
+//
 //        char filename[20];
 //        exe2In.open(filename);
 //        if (exe2In.fail())
@@ -249,7 +249,7 @@
 //    //      i) first column shows one occurance of integer (from uniqueIntArray)
 //    //      ii) second column shows repeat count (from repeatCountArray)
 //    //   b. iterate through uniqueIntArray to print report.
-//    
+//
 //    exe2Out.open("//users//adish//desktop//excercise2.txt");
 //    if (exe2Out.fail())
 //    {
@@ -259,7 +259,7 @@
 //    }
 //    cout << "Output of the formatted report: \n";
 //    cout << setw(10) << "N" << setw(13) << "Count\n";
-//    
+//
 //    for (int j = 0; j < uniqueElementCount; j++)
 //    {
 //        int uniqueInt = uniqueIntegerArray[j];
@@ -274,15 +274,15 @@
 //    /**
 //     *
 //     * Excercise 3
-//     
+//
 //     1. Read information from first file and store that information in  array.
 //     2. Read information from second file and append that information in same array.
 //     3. Sort the array from smallest to largest
 //     4. Print report in the required format
 //     */
-//    
+//
 //    cout << "\n\n\n\nExcercise 3: \n";
-//    
+//
 //    int array1[50];
 //    ofstream exe3Out;
 //    ifstream exe3In;
@@ -296,15 +296,15 @@
 //        cout << "Program terminated";
 //        exit(1);
 //    }
-//    
+//
 //    int count = 0;
 //    while (!exe3In.eof())
 //    {
 //        exe3In >> array1[count++]; // reading and storing in charArray variable
 //    }
-//    
+//
 //    exe3In.close();
-//    
+//
 //    //
 //    //        2. Read information from second file and append that information in  same array.
 //    exe3In.open("//users//adish//desktop//array2.txt");
@@ -314,14 +314,14 @@
 //        cout << "Program terminated";
 //        exit(1);
 //    }
-//    
+//
 //    while (!exe3In.eof())
 //    {
 //        exe3In >> array1[count++]; // reading and appending in the same array
-//        
+//
 //    }
 //    exe3In.close();
-//    
+//
 //    //
 //    //      3. Sort the array from smallest to largest
 //    SortSmallestoLargest(array1, count);
@@ -410,7 +410,7 @@
 //        {
 //            max = a[i];
 //            index_of_max = i;
-//            
+//
 //        }
 //    }
 //    return index_of_max;

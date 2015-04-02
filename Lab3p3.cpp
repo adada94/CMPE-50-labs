@@ -1,4 +1,4 @@
-
+////
 ////  Lab3p3.cpp
 ////  C++_Central
 ////
@@ -33,15 +33,15 @@
 //        cout << "Program terminated";
 //        exit(1);
 //    }
-//    
+//
 //    int count = 0;
 //    while (!exe3In.eof())
 //    {
 //        exe3In >> array1[count++]; // reading and storing in charArray variable
 //    }
-//    
+//
 //    exe3In.close();
-//    
+//
 //    //
 //    //        2. Read information from second file and append that information in  same array.
 //    exe3In.open("//users//adish//desktop//array2.txt");
@@ -51,14 +51,14 @@
 //        cout << "Program terminated";
 //        exit(1);
 //    }
-//    
+//
 //    while (!exe3In.eof())
 //    {
 //        exe3In >> array1[count++]; // reading and appending in the same array
 //
 //    }
 //    exe3In.close();
-//    
+//
 //    //
 //    //      3. Sort the array from smallest to largest
 //    SortSmallestoLargest(array1, count);
