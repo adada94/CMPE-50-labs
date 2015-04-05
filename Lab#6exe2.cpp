@@ -72,6 +72,7 @@ int main()
     int option;
     while(1)
     {
+        MakeSpace(3);
         cout << "select option: \n" << "1. Add\t\t 2. Substract\t\t 3. Multiply\t\t 4. Divide\t\t 5. End Program" << endl;
         cin >> option;
         if (option == 1)
@@ -133,7 +134,7 @@ void Rational::Input(istream& in)
 }
 void Rational::Output(ostream& out)
 {
-    out << numerator << "/" << denominator << endl;
+    out << numerator << "/" << denominator;
 }
 
 
