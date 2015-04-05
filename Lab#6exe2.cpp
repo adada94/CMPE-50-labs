@@ -59,6 +59,8 @@ Rational::Rational(int num, int den)
 // other functions
 int gcd(int n1, int n2); // find greatest common denominator
 
+// this function will factor out the common numbers present in the fraction and will return the simplest form of the rational number
+void reduce(int &numerator,int &denominator); // acquired from outside source
 
 int main()
 {
@@ -221,3 +223,17 @@ int gcd(int n1, int n2) // greatest common denominator
     return n1;
 }
 
+// this function will factor out the common numbers present in the fraction and will return the simplest form of the rational number
+void reduce(int &numerator,int &denominator) // acquired from outside source
+{
+    int rdc = 0;
+    if(denominator>numerator)
+        rdc = gcd(denominator,numerator);
+    else if(denominator<numerator)
+        rdc = gcd(numerator,denominator);
+    else
+        rdc = gcd(numerator, denominator);
+    numerator /= rdc;
+    denominator /= rdc;
+    cout<<"\nAfter operating the rational numbers are: "<< numerator << "/" << denominator <<endl;
+}
