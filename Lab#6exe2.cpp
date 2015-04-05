@@ -60,21 +60,20 @@ Rational::Rational(int num, int den)
 int gcd(int n1, int n2); // find greatest common denominato
 // this function will factor out the common numbers present in the fraction and will return the simplest form of the rational number
 void reduce(int &numerator, int &denominator); // acquired from outside source
+void enterValues(Rational& rash1, Rational& rash2);
 
 int main()
 {
     cout << "Excercise 2\n\n";
     Rational rash1(0,1);
     Rational rash2(0,1);
-    rash1.Input(cin);
-    rash1.Output(cout);
-    rash2.Input(cin);
-    rash2.Output(cout);
+    
+    enterValues(rash1, rash2);
     int option;
     while(1)
     {
         MakeSpace(3);
-        cout << "select option: \n" << "1. Add\t\t 2. Substract\t\t 3. Multiply\t\t 4. Divide\t\t 5. End Program" << endl;
+        cout << "select option: \n" << "1. Add\t\t 2. Substract\t\t 3. Multiply\t\t 4. Divide\t\t 5. Reenter values\\t\t 6. End Program" << endl;
         cin >> option;
         if (option == 1)
         {
@@ -102,8 +101,13 @@ int main()
         }
         if(option == 5)
         {
+            enterValues(rash1, rash2);
+        }
+        if (option == 6)
+        {
             break;
         }
+        
     }
     
     return 1;
@@ -135,7 +139,19 @@ void Rational::Input(istream& in)
 }
 void Rational::Output(ostream& out)
 {
-    out << numerator << "/" << denominator;
+    if (numerator < 0 || denominator < 0)
+    {
+        out << "-" << abs(numerator) << "/" << abs(denominator);
+    }
+    else
+    {
+        out << numerator << "/" << denominator;
+    }
+    
+    if (numerator == 1 && denominator == 1)
+    {
+        out << "1";
+    }
 }
 
 
@@ -178,6 +194,7 @@ Rational Substract(Rational& rash1, Rational& rash2)
     int combinedNum1 = rash1.numerator * rash2.denominator;
     int combinedNum2 = rash2.numerator * rash1.denominator;
     Rational difference(combinedNum1 - combinedNum2, rash1.denominator * rash2.denominator);
+    reduce(difference.numerator, difference.denominator);
     difference.Output(cout);
     return difference;
 }
@@ -186,6 +203,7 @@ Rational Substract(Rational& rash1, Rational& rash2)
 Rational Multiply(Rational& rash1, Rational& rash2)
 {
     Rational product(rash1.numerator * rash2.numerator, rash1.denominator * rash2.denominator);
+    reduce(product.numerator, product.denominator);
         product.Output(cout);
     return product;
 }
@@ -204,12 +222,27 @@ Rational Divide(Rational& rash1, Rational& rash2)
                     RUDIMENTARY PROCEDURE
      */
     Rational quotient(rash1.numerator * rash2.denominator, rash1.denominator * rash2.denominator);
-        quotient.Output(cout);
+    reduce(quotient.numerator, quotient.denominator);
+    quotient.Output(cout);
     return quotient;
     
 }
 
-// other function definitions1
+// other function definitions
+
+
+
+void enterValues(Rational& rash1, Rational& rash2)
+{
+    rash1.Input(cin);
+    rash1.Output(cout);
+    cout << "\n";
+    rash2.Input(cin);
+    cout << "\n";
+    rash2.Output(cout);
+}
+
+
 
 int gcd(int n1, int n2) // greatest common denominator
 {
