@@ -23,12 +23,9 @@ using namespace std;
 class Rational
 {
 private:
-
-
-public:
     int numerator;
     int denominator;
-    
+public:
     // default constructor
     Rational(int num, int den);
     
@@ -73,7 +70,7 @@ int main()
     while(1)
     {
         MakeSpace(3);
-        cout << "select option: \n" << "1. Add\t\t 2. Substract\t\t 3. Multiply\t\t 4. Divide\t\t 5. Reenter values\\t\t 6. End Program" << endl;
+        cout << "select option: \n" << "1. Add\t\t 2. Substract\t\t 3. Multiply\t\t 4. Divide\t\t 5. Reenter values\t\t 6. End Program" << endl;
         cin >> option;
         if (option == 1)
         {
@@ -105,6 +102,7 @@ int main()
         }
         if (option == 6)
         {
+            cout << "\nProgram terminated\n";
             break;
         }
         
@@ -139,18 +137,21 @@ void Rational::Input(istream& in)
 }
 void Rational::Output(ostream& out)
 {
-    if (numerator < 0 || denominator < 0)
+    if (numerator == 1 && denominator == 1)
+    {
+        out << "1";
+    }
+    else if (numerator == 0 && denominator == 0)
+    {
+        out << "0";
+    }
+    else if (numerator < 0 || denominator < 0)
     {
         out << "-" << abs(numerator) << "/" << abs(denominator);
     }
     else
     {
         out << numerator << "/" << denominator;
-    }
-    
-    if (numerator == 1 && denominator == 1)
-    {
-        out << "1";
     }
 }
 
@@ -204,7 +205,7 @@ Rational Multiply(Rational& rash1, Rational& rash2)
 {
     Rational product(rash1.numerator * rash2.numerator, rash1.denominator * rash2.denominator);
     reduce(product.numerator, product.denominator);
-        product.Output(cout);
+    product.Output(cout);
     return product;
 }
 
@@ -221,7 +222,7 @@ Rational Divide(Rational& rash1, Rational& rash2)
      *     =    1/2
                     RUDIMENTARY PROCEDURE
      */
-    Rational quotient(rash1.numerator * rash2.denominator, rash1.denominator * rash2.denominator);
+    Rational quotient(rash1.numerator * rash2.denominator, rash1.denominator * rash2.numerator);
     reduce(quotient.numerator, quotient.denominator);
     quotient.Output(cout);
     return quotient;
@@ -249,7 +250,6 @@ int gcd(int n1, int n2) // greatest common denominator
     int temp;
     while (n2 != 0)
     {
-        //cout << "n2 = " << n2 << endl;
         temp = n1;
         n1 = n2;
         n2 = temp % n2;
@@ -269,5 +269,79 @@ void reduce(int &numerator,int &denominator) // acquired from outside source
         rdc = gcd(numerator, denominator);
     numerator /= rdc;
     denominator /= rdc;
-    //cout<<"\nAfter operating the rational numbers are: "<< numerator << "/" << denominator <<endl;
 }
+
+
+
+/**     OUTPUT WINDOW
+*
+ *Excercise 2
+ 
+ Enter number for numerator:
+ 1
+ Enter number for denominator:
+ 4
+ 1/4
+ Enter number for numerator:
+ 3
+ Enter number for denominator:
+ 5
+ 
+ 3/5
+ 
+ 
+ select option:
+ 1. Add		 2. Substract		 3. Multiply		 4. Divide		 5. Reenter values		 6. End Program
+ 1
+ 1/4 + 3/5 = 17/20
+ 
+ 
+ select option:
+ 1. Add		 2. Substract		 3. Multiply		 4. Divide		 5. Reenter values		 6. End Program
+ 2
+ 1/4 - 3/5 = -7/20
+ 
+ 
+ select option:
+ 1. Add		 2. Substract		 3. Multiply		 4. Divide		 5. Reenter values		 6. End Program
+ 3
+ 1/4 * 3/5 = 3/20
+ 
+ 
+ select option:
+ 1. Add		 2. Substract		 3. Multiply		 4. Divide		 5. Reenter values		 6. End Program
+ 4
+ 1/4 / 3/5 = 5/12
+ 
+ 
+ select option:
+ 1. Add		 2. Substract		 3. Multiply		 4. Divide		 5. Reenter values		 6. End Program
+ 5
+ Enter number for numerator:
+ 2
+ Enter number for denominator:
+ 5
+ 2/5
+ Enter number for numerator:
+ 3
+ Enter number for denominator:
+ 2
+ 
+ 3/2
+ 
+ 
+ select option:
+ 1. Add		 2. Substract		 3. Multiply		 4. Divide		 5. Reenter values		 6. End Program
+ 4
+ 2/5 / 3/2 = 4/15
+ 
+ 
+ select option:
+ 1. Add		 2. Substract		 3. Multiply		 4. Divide		 5. Reenter values		 6. End Program
+ 6
+ 
+ Program terminated
+
+*
+*
+**/
