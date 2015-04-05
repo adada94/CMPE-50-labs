@@ -13,5 +13,6 @@
 #include "Persona.cpp"
 
 void MakeSpace(int space);
-void Swapv2(int& a, int& b);
+void Swapv1(int num1, int num2); // uses temp variable
+void Swapv2(int& a, int& b); // uses bit operator in place of temp variable
 #endif /* defined(__C___Central__Persona__) */

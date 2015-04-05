@@ -33,12 +33,12 @@ void printLine(int times, char symbol)
 }
 
 // swap function using a temp variable
-//void Swapv1(int num1, int num2)
-//{
-//    int temp;
-//    temp = num1;
-//    num1 = num2;
-//}
+void Swapv1(int num1, int num2)
+{
+    int temp;
+    temp = num1;
+    num1 = num2;
+}
 
 // swap function without using a temp variable
 void Swapv2(int& a, int& b)

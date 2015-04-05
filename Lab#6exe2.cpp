@@ -24,10 +24,10 @@ class Rational
 {
 private:
 
-    int numerator;
-    int denominator;
 
 public:
+    int numerator;
+    int denominator;
     
     // default constructor
     Rational(int num, int den);
@@ -51,16 +51,15 @@ public:
 // defining default constructor
 Rational::Rational(int num, int den)
 {
-    numerator = 0;
-    denominator = 1;
+    numerator = num;
+    denominator = den;
 }
 
 
 // other functions
-int gcd(int n1, int n2); // find greatest common denominator
-
+int gcd(int n1, int n2); // find greatest common denominato
 // this function will factor out the common numbers present in the fraction and will return the simplest form of the rational number
-void reduce(int &numerator,int &denominator); // acquired from outside source
+void reduce(int &numerator, int &denominator); // acquired from outside source
 
 int main()
 {
@@ -79,25 +78,25 @@ int main()
         cin >> option;
         if (option == 1)
         {
-            rash1.Output(cout); cout << " + "; rash2.Output(cout);
+            rash1.Output(cout); cout << " + "; rash2.Output(cout); cout << " = ";
             Add(rash1, rash2);
             continue;
         }
         if (option == 2)
         {
-            rash1.Output(cout); cout << " - "; rash2.Output(cout);
+            rash1.Output(cout); cout << " - "; rash2.Output(cout); cout << " = ";
             Substract(rash1, rash2);
             continue;
         }
         if (option == 3)
         {
-            rash1.Output(cout); cout << " * "; rash2.Output(cout);
+            rash1.Output(cout); cout << " * "; rash2.Output(cout); cout << " = ";
             Multiply(rash1, rash2);
             continue;
         }
         if (option == 4)
         {
-            rash1.Output(cout); cout << " / "; rash2.Output(cout);
+            rash1.Output(cout); cout << " / "; rash2.Output(cout); cout << " = ";
             Divide(rash1, rash2);
             continue;
         }
@@ -167,6 +166,7 @@ Rational Add(Rational& rash1, Rational& rash2)
     int combinedNum1 = rash1.numerator * rash2.denominator;
     int combinedNum2 = rash2.numerator * rash1.denominator;
     Rational sum(combinedNum1 + combinedNum2, rash1.denominator * rash2.denominator);
+    reduce(sum.numerator, sum.denominator);
     sum.Output(cout);
     return sum;
 }
@@ -209,13 +209,14 @@ Rational Divide(Rational& rash1, Rational& rash2)
     
 }
 
-// other function definitions
+// other function definitions1
+
 int gcd(int n1, int n2) // greatest common denominator
 {
     int temp;
     while (n2 != 0)
     {
-        cout << "n2 = " << n2 << endl;
+        //cout << "n2 = " << n2 << endl;
         temp = n1;
         n1 = n2;
         n2 = temp % n2;
@@ -226,7 +227,7 @@ int gcd(int n1, int n2) // greatest common denominator
 // this function will factor out the common numbers present in the fraction and will return the simplest form of the rational number
 void reduce(int &numerator,int &denominator) // acquired from outside source
 {
-    int rdc = 0;
+    int rdc = 0; //
     if(denominator>numerator)
         rdc = gcd(denominator,numerator);
     else if(denominator<numerator)
@@ -235,5 +236,5 @@ void reduce(int &numerator,int &denominator) // acquired from outside source
         rdc = gcd(numerator, denominator);
     numerator /= rdc;
     denominator /= rdc;
-    cout<<"\nAfter operating the rational numbers are: "<< numerator << "/" << denominator <<endl;
+    //cout<<"\nAfter operating the rational numbers are: "<< numerator << "/" << denominator <<endl;
 }
