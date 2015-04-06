@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include "EaseOfAccesss.h"
-
+#include "Persona.h"
 int main()
 {
     ifstream input;
@@ -47,41 +47,7 @@ int main()
     {
         for (int j = 0; j < rowSize; j++) // columns seating
         {
-            if (seats[i][0] == '1')
-            {
-                cout << seats[i][j];
-                cout << "\n";
-            }
-            else if (seats[i][0] == '2')
-            {
-                cout << seats[i][j];
-                cout << "\n";
-            }
-            else if (seats[i][0] == '3')
-            {
-                cout << seats[i][j];
-                cout << "\n";
-            }
-            else if (seats[i][0] == '4')
-            {
-                cout << seats[i][j];
-                cout << "\n";
-            }
-            
-            else if (seats[i][0] == '5')
-            {
-                cout << seats[i][j];
-                cout << "\n";
-            }
-            else if (seats[i][0] == '6')
-            {
-                cout << seats[i][j];
-                cout << "\n";                
-            }
-            else
-            {
-                seats[i][j] = 65 + j; // converting the ASCII character to get characters 'A' 'B'.... etc.
-            }
+            seats[i][j] = 65 + j; // converting the ASCII character to get characters 'A' 'B'.... etc.
             cout << seats[i][j] << " "; // outputting the seats in this order
 
         }
