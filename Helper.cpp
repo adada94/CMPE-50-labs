@@ -30,6 +30,5 @@ void makeMenu()
         {
             cout << "File does not exist";
         }
-        
     }
 }
