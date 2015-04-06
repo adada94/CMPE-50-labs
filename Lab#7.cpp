@@ -37,7 +37,7 @@ int main()
     //outputting the seating arrangement
     for (int i = 0; i < rowSize; i++) // rows seating
     {
-        for (int j = 0; j < rowSize; j++) // columns seating
+        for (int j = 0; j < 4; j++) // columns seating
         {
             seats[i][j] = 65 + j; // converting the ASCII character to get characters 'A' 'B'.... etc.
             cout << seats[i][j] << " "; // outputting the seats in this order
@@ -45,21 +45,46 @@ int main()
         }
         cout << "\n";
     }
-    delete seats;
+//    delete seats;
     
     // begin asking for seat numbers and assign them accordingly
     
-    //    char *colA;
-    //    char *colB;
-    //    char *colC;
-    //    char *colD;
+//        char *colA;
+//        char *colB;
+//        char *colC;
+//        char *colD;
     
     
     
-    //    colA = new char[rowSize];
-    //    colB = new char[rowSize];
-    //    colC = new char[rowSize];
-    //    colD = new char[rowSize];
-    makeMenu();
+//        colA = new char[rowSize];
+//        colB = new char[rowSize];
+//        colC = new char[rowSize];
+//        colD = new char[rowSize];
+
+    int option;
+    cout << "\n\nWould you like to enter the information from the keyboard or from another file?\n";
+    cout << "\t\t\t1. keyboard \t\t\t2. file\n";
+    cin >> option;
     
+    if (option == 1)
+    {
+        cout << "You have chosen to provide info with keyboard" << endl;
+        cout << "What seat number would you like on this airline?" << endl;
+        
+        
+    }
+    else if (option == 2)
+    {
+        chdir("//users//adish//desktop");
+        string filename;
+        cout << "What is name of the file that contains the seating arrangement?" << endl;
+        cin >> filename;
+        input.open(filename);
+        if (input.fail())
+        {
+            cout << "File does not exist";
+        }
+        input.close();
+    }
+
 }

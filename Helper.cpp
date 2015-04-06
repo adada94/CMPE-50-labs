@@ -23,7 +23,7 @@ void makeMenu()
     {
         chdir("//users//adish//desktop");
         string filename;
-        cout << "You have chosen to provide info with a file. What is name of the file that contains the seating arrangement?" << endl;
+        cout << "What is name of the file that contains the seating arrangement?" << endl;
         cin >> filename;
         input.open(filename);
         if (input.fail())
