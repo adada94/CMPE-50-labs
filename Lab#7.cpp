@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "EaseOfAccesss.h"
 #include "Persona.h"
+#include "Helper.h"
 int main()
 {
     ifstream input;
@@ -48,12 +49,6 @@ int main()
     
     // begin asking for seat numbers and assign them accordingly
     
-    
-    
-    
-    
-    
-    
     //    char *colA;
     //    char *colB;
     //    char *colC;
@@ -65,5 +60,6 @@ int main()
     //    colB = new char[rowSize];
     //    colC = new char[rowSize];
     //    colD = new char[rowSize];
+    makeMenu();
     
 }
