@@ -45,32 +45,24 @@ int main()
         }
         cout << "\n";
     }
-//    delete seats;
     
     // begin asking for seat numbers and assign them accordingly
     
-//        char *colA;
-//        char *colB;
-//        char *colC;
-//        char *colD;
-    
-    
-    
-//        colA = new char[rowSize];
-//        colB = new char[rowSize];
-//        colC = new char[rowSize];
-//        colD = new char[rowSize];
 
     int option;
     cout << "\n\nWould you like to enter the information from the keyboard or from another file?\n";
     cout << "\t\t\t1. keyboard \t\t\t2. file\n";
     cin >> option;
-    
+    int seats_Available;
     if (option == 1)
     {
+        int row = 0;
+        char column = 'A';
         cout << "You have chosen to provide info with keyboard" << endl;
-        cout << "What seat number would you like on this airline?" << endl;
-        
+        cout << "What row number would you like on this airline?\n Choose between 1 <--> 7" << endl;
+        cin >> row;
+        cout << "Seats available: " << seats_Available;
+        cin >> column;
         
     }
     else if (option == 2)
