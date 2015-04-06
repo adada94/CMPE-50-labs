@@ -54,8 +54,10 @@ int main()
         cout << "\n";
     }
     
+    
+    // begin asking for seat numbers and assign them accordingly
+    
+    
+    cout << "\n\nWould you like to enter the information from the keyboard or from another file?\n";
+    cout << "\t\t\t1. keyboard \t\t\t2. file";
 }
-
-
-
-
