@@ -54,18 +54,27 @@ int main()
     cout << "\t\t\t1. keyboard \t\t\t2. file\n";
     cin >> option;
     int seats_Available;
-    if (option == 1)
+    if (option == 1) // keyboard
     {
         int row = 0;
         char column = 'A';
         cout << "You have chosen to provide info with keyboard" << endl;
         cout << "What row number would you like on this airline?\n Choose between 1 <--> 7" << endl;
+        cout << "Seats available: " << seats_Available << endl;
         cin >> row;
-        cout << "Seats available: " << seats_Available;
+        if (row > 7)
+        {
+            cout << "This row does not exist";
+        }
+        cout << "What row number would you like on this airline?\n Choose between A <--> D" << endl;
         cin >> column;
+        if (column != 'A')
+        {
+            cout << "This column does not exist" << endl;
+        }
         
     }
-    else if (option == 2)
+    else if (option == 2) // file IO
     {
         chdir("//users//adish//desktop");
         string filename;
