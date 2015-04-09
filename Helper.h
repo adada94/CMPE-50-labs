@@ -9,8 +9,11 @@
 #ifndef __C___Central__Helper__
 #define __C___Central__Helper__
 
+
+// interface file provided for Helper.cpp
 #include <stdio.h>
 #include "EaseOfAccesss.h"
+
 void makeMenu();
 
 #endif /* defined(__C___Central__Helper__) */

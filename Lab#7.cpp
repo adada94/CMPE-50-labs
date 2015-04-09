@@ -7,7 +7,6 @@
 //
 
 #include <stdio.h>
-#include "EaseOfAccesss.h"
 #include "Persona.h"
 #include "Helper.h"
 int main()
