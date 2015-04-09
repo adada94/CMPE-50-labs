@@ -74,9 +74,9 @@ int main()
         }
         
     }
-    else if (option == 2) // file IO
+    else if (option == 2) // file IO. getting input from file
     {
-        chdir("//users//adish//desktop");
+        chdir("//users//adish//desktop"); // we change the default directory to the desktop
         string filename;
         cout << "What is name of the file that contains the seating arrangement?" << endl;
         cin >> filename;
