@@ -53,7 +53,7 @@ int main()
     cout << "\t\t\t1. keyboard \t\t\t2. file\n";
     cin >> option;
     int seats_Available;
-    if (option == 1) // keyboard
+    if (option == 1) // option for getting user from keyboard
     {
         int row = 0;
         char column = 'A';
