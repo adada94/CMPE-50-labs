@@ -99,12 +99,24 @@ int main()
        {
            
        }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        if(option == 1)
            cin >> seatName;
        else
            input >> seatName;
        
-       int rowNumber = 0;
+//       int rowNumber = 0;
        
        if (option == 1) // option for getting user from keyboard
        {
