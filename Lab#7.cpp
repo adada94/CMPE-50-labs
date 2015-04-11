@@ -65,7 +65,7 @@ int main()
     // begin asking for seat numbers and assign them accordingly
    while(1)
    {
-       MakeSpace(1);
+       MakeSpace(2);
        cout << "You have chosen to provide info with keyboard" << endl;
        cout << "What row number would you like on this airline?\n Choose between 1 <--> " << rowSize << endl;
        cout << "Seats available: " << SeatsAvailable(seats, rowSize, seatsInEachRow) << "/" << (rowSize * seatsInEachRow) << endl;
@@ -74,9 +74,9 @@ int main()
 
        string seatName = "";
        //
-       if(option == 1)
+       if (option == 1)
            cin >> seatName;
-       else
+       else if (option == 2)
            input >> seatName;
        //
        if (seatName == "end")
@@ -89,22 +89,22 @@ int main()
            continue;
        }
        char rowNumber = seatName.at(0);
-       if ((rowNumber < 0x31) || (rowNumber > (rowSize+0x30))) // if the row number goes out of bound
+       if ((rowNumber <= 0x31) || (rowNumber > (rowSize+0x30))) // if the row number goes out of bound
        {
            cout << "Row does not exist";
            continue;
        }
        char seatNumber = seatName.at(1);
-       if (seatNumber < 0x41 || seatNumber > 0x44) // if the seat name goes out of bound
+       if (seatNumber < 0x41 || seatNumber > 0x44 ) // if the seat name goes out of bound for capital letters
        {
            cout << "Seat name does not exist";
            continue;
        }
-       
-       
-       
-       
-       
+       else if (seatNumber < 0x61 || seatNumber > 0x64) // if the seat name goes out of bound for capital letters
+       {
+           cout << "Seat name does not exist";
+           continue;           
+       }
        
        
        
@@ -139,10 +139,7 @@ int main()
 
    }
     
-    
-    
-    
-    input.close();
+    input.close(); // close the input stream to the file
     for (int i = 0; i < rowSize; i++)
     {
         delete seats[i]; // deleting memory for each row
