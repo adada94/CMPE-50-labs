@@ -114,18 +114,6 @@ int main()
        }
        int seatsAvailable = 0;
        
-       for (int i = 0; i < rowSize; i++) // rows seating
-       {
-           for (int j = 0; j < seatsInEachRow; j++) // columns seating
-           {
-               
-               // if the value at current index locatin of rows is NOT 'X', then we increments the seats available
-               if (seats[i][j] != 'X')
-               {
-                   seatsAvailable++;
-               }
-           }
-       }
        
        
        if(option == 1)
