@@ -22,7 +22,7 @@ int main()
 {
     cout << "Excercise 1\n";
     cout << "Welcome to BlueWing Airways" << endl;
-    MakeSpace(2); // prints extra lines
+    MakeSpace(1); // prints extra lines
     int option;
     cout << "\n\nWould you like to enter the information from the keyboard or from another file?\n";
     cout << "\t\t\t1. keyboard \t\t\t2. file\n";
@@ -67,9 +67,9 @@ int main()
    {
        MakeSpace(2);
        cout << "You have chosen to provide info with keyboard" << endl;
-       cout << "What row number would you like on this airline?\n Choose between 1 <--> " << rowSize << endl;
+       cout << "What row number would you like on this airline? Choose between 1 <--> " << rowSize << endl;
        cout << "Seats available: " << SeatsAvailable(seats, rowSize, seatsInEachRow) << "/" << (rowSize * seatsInEachRow) << endl;
-       cout << "Enter your desired seat number. Format (row number)(seat name)" << endl;
+       cout << "Enter your desired seat number:--> Format (row number)(seat name)" << endl;
        //
 
        string seatName = "";
@@ -103,7 +103,7 @@ int main()
        else if (seatNumber < 0x61 || seatNumber > 0x64) // if the seat name goes out of bound for capital letters
        {
            cout << "Seat name does not exist";
-           continue;           
+           continue;
        }
        
        

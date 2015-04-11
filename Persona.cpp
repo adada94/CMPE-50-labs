@@ -12,7 +12,7 @@
 // printing extra lines to create space in the console
 void MakeSpace(int space)
 {
-    for (int i = 0; i < space; i++)
+    for (int i = 1; i <= space; i++)
     {
         cout << "\n";
     }
