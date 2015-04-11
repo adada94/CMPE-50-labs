@@ -10,7 +10,7 @@
 #define C___Central_EaseOfAccesss_h
 // make sure you copy and paste these includes into the assignment page so that it seems that we are staying with the class.
 
-using namespace std;
+
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
@@ -20,5 +20,7 @@ using namespace std;
 #include <string>
 #include <cctype>
 #include <time.h>
+using namespace std;
+
 
 #endif

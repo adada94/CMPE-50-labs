@@ -21,11 +21,14 @@ void PrintSeatingArrangement(Char_ptr *seats, int rowSize, int numberOfSeatsPerR
 int main()
 {
     cout << "Excercise 1\n";
-    cout << "Welcome to BlueWing Airways" << endl;
+    MakeSpace(1);
+    printLine(35, '-');
+    cout << "\tWelcome to BlueWing Airways" << endl;
+    printLine(35, '-');
     MakeSpace(1); // prints extra lines
     int option;
     cout << "\n\nWould you like to enter the information from the keyboard or from another file?\n";
-    cout << "\t\t\t1. keyboard \t\t\t2. file\n";
+    cout << "\t\t\t1. Keyboard \t\t\t2. File\n";
     cin >> option;
     
     ifstream input;
@@ -35,7 +38,7 @@ int main()
     cout << "How many rows are in the plane?\n"; // defining number of rows
     if(option == 1)
         cin >> rowSize;
-    else
+    else if (option == 2)
         input >> rowSize;
     const int seatsInEachRow = 4;
     cout << "There are " << rowSize << " rows and " << seatsInEachRow << " seats in each row on this flight\n";
@@ -67,8 +70,8 @@ int main()
    {
        MakeSpace(2);
        cout << "You have chosen to provide info with keyboard" << endl;
-       cout << "What row number would you like on this airline? Choose between 1 <--> " << rowSize << endl;
        cout << "Seats available: " << SeatsAvailable(seats, rowSize, seatsInEachRow) << "/" << (rowSize * seatsInEachRow) << endl;
+       cout << "What row number would you like on this airline? Choose between 1 <--> " << rowSize << endl;
        cout << "Enter your desired seat number:--> Format (row number)(seat name)" << endl;
        //
 
@@ -86,30 +89,43 @@ int main()
        if(seatName.length() != 2)
        {
            cout << "Incorrect information entered";
+           MakeSpace(4);
            continue;
        }
-       char rowNumber = seatName.at(0);
-       if ((rowNumber <= 0x31) || (rowNumber > (rowSize+0x30))) // if the row number goes out of bound
+       char rowNumber = seatName.at(0); // first component of string
+       if ((rowNumber < '1') || (rowNumber > (rowSize + '4'))) // if the row number goes out of bound
        {
            cout << "Row does not exist";
+           MakeSpace(2);
            continue;
        }
-       char seatNumber = seatName.at(1);
-       if (seatNumber < 0x41 || seatNumber > 0x44 ) // if the seat name goes out of bound for capital letters
+       char seatNumber = seatName.at(1); // second component of string
+       if (seatNumber < 'A' || seatNumber > (seatNumber + 'D')) // if the seat name goes out of bound for capital letters
        {
            cout << "Seat name does not exist";
+           MakeSpace(2);
            continue;
        }
-       else if (seatNumber < 0x61 || seatNumber > 0x64) // if the seat name goes out of bound for capital letters
+       else if (seatNumber < 'a' || seatNumber > (seatNumber + 'b'))  // if the seat name goes out of bound for capital letters
        {
            cout << "Seat name does not exist";
+           MakeSpace(2);
            continue;
        }
+       int seatsAvailable = 0;
        
-       
-       
-       
-       
+       for (int i = 0; i < rowSize; i++) // rows seating
+       {
+           for (int j = 0; j < seatsInEachRow; j++) // columns seating
+           {
+               
+               // if the value at current index locatin of rows is NOT 'X', then we increments the seats available
+               if (seats[i][j] != 'X')
+               {
+                   seatsAvailable++;
+               }
+           }
+       }
        
        
        if(option == 1)
