@@ -9,7 +9,7 @@
 #include "Persona.h"
 #include "EaseOfAccesss.h"
 
-// makes space in the conole window
+// printing extra lines to create space in the console
 void MakeSpace(int space)
 {
     for (int i = 0; i < space; i++)
