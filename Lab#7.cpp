@@ -11,18 +11,20 @@
 #include "Helper.h"
 int main()
 {
-    cout << "Welcome to BlueWing Airway" << endl;
+    cout << "Excercise 1\n";
+    cout << "Welcome to BlueWing Airways" << endl;
+    MakeSpace(2);
+    
     ifstream input;
     input.open("//users//adish//desktop//input.txt");
     // defining dynamic array
     int rowSize;
-//    cout << "How many passengers are in a row on this airline?" << endl;
     input >> rowSize;
 
     // getting input for number of seats in an airplane
-    char **seats;
-
-    seats = new char*[rowSize];
+    typedef char* Char_ptr;
+    Char_ptr *seats; // number of seats
+    seats = new Char_ptr[rowSize]; // dynamic number of seats
     
     // acquiring info from file to put into array for seats
     for (int i = 0; i < rowSize; i++)
@@ -31,7 +33,8 @@ int main()
     }
     input.close();
     
-
+    cout << "Today's seating arrangement" << endl;
+    printLine(8, '-');
     //outputting the seating arrangement
     for (int i = 0; i < rowSize; i++) // rows seating
     {
@@ -85,5 +88,6 @@ int main()
 //        }
 //        input.close();
 //    }
+    delete seats;
 
 }
