@@ -89,15 +89,16 @@ int main()
            continue;
        }
        char rowNumber = seatName.at(0);
-       if ((rowNumber < 0x31) || (rowNumber > (rowSize+0x30)))
+       if ((rowNumber < 0x31) || (rowNumber > (rowSize+0x30))) // if the row number goes out of bound
        {
            cout << "Row does not exist";
            continue;
        }
        char seatNumber = seatName.at(1);
-       if (seatNumber >= 0x41 && seatNumber <= 0x44)
+       if (seatNumber < 0x41 || seatNumber > 0x44) // if the seat name goes out of bound
        {
-           
+           cout << "Seat name does not exist";
+           continue;
        }
        
        
@@ -120,18 +121,6 @@ int main()
        
        if (option == 1) // option for getting user from keyboard
        {
-           int row = 0;
-           char column = 'A';
-           cin >> row;
-           if (row > 7)
-           {
-               cout << "This row does not exist";
-           }
-           cin >> column;
-           if (column != 'A')
-           {
-               cout << "This column does not exist" << endl;
-           }
            
        }
        //    else if (option == 2) // file IO. getting input from file
