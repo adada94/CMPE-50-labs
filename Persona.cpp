@@ -29,7 +29,7 @@ void printLine(int times, char symbol)
             cout << symbol << endl;
         }
     }
-    
+    cout << "\n";
 }
 
 // swap function using a temp variable

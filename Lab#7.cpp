@@ -19,9 +19,10 @@ int main()
     input.open("//users//adish//desktop//input.txt");
     // defining dynamic array
     int rowSize;
+    cout << "How many rows are in the plane?\n"; // defining number of rows
     input >> rowSize;
-
-    // getting input for number of seats in an airplane
+    
+    // getting input for number of seats in an airplane using dynamic array
     typedef char* Char_ptr;
     Char_ptr *seats; // number of seats
     seats = new Char_ptr[rowSize]; // dynamic number of seats
@@ -29,12 +30,12 @@ int main()
     // acquiring info from file to put into array for seats
     for (int i = 0; i < rowSize; i++)
     {
-        seats[i] = new char[4];
+        seats[i] = new char[4]; // ??
     }
     input.close();
     
     cout << "Today's seating arrangement" << endl;
-    printLine(8, '-');
+    printLine(25, '-');
     //outputting the seating arrangement
     for (int i = 0; i < rowSize; i++) // rows seating
     {
@@ -42,7 +43,7 @@ int main()
         {
             seats[i][j] = 65 + j; // converting the ASCII character to get characters 'A' 'B'.... etc.
             cout << seats[i][j] << " "; // outputting the seats in this order
-
+            
         }
         cout << "\n";
     }
