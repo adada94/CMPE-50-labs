@@ -88,7 +88,7 @@ int main()
        if(seatName.length() != 2)
        {
            cout << "Incorrect information entered";
-           MakeSpace(4);
+           MakeSpace(3);
            continue;
        }
        char rowNumber = seatName.at(0); // first component of string
@@ -122,21 +122,25 @@ int main()
            continue;
        }
        
-
-       
-       
-       
-       if(option == 1)
-           cin >> seatName;
+       if (seats[rowNumberIndex][seatNumberIndex] == 'X')
+       {
+           seats[rowNumberIndex][seatNumberIndex] = 'X';
+           cout << seatName << " is now taken.\n";
+           MakeSpace(2);
+           continue;
+       }
        else
-           input >> seatName;
+       {
+           cout << seatName << " has already been taken.\n"
+       }
+       
        
 //       int rowNumber = 0;
        
-       if (option == 1) // option for getting user from keyboard
-       {
-           
-       }
+//       if (option == 1) // option for getting user from keyboard
+//       {
+//           
+//       }
        //    else if (option == 2) // file IO. getting input from file
        //    {
        //        chdir("//users//adish//desktop"); // we change the default directory to the desktop
