@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Adish Betawar. All rights reserved.
 //
 
-#include <stdio.h>
+#include "EaseOfAccesss.h"
 #include "Persona.h"
 
 
@@ -21,9 +21,9 @@ int main()
 {
     cout << "Excercise 1\n";
     MakeSpace(1);
-    printLine(35, '-');
-    cout << "\tWelcome to BlueWing Airways" << endl;
-    printLine(35, '-');
+    printLine(42, '-'); // this functions a line with a symbol of the programmer's choice. function defined in Persona.cpp
+    cout << "\t\tWelcome to BlueWing Airways" << endl;
+    printLine(42, '-');
     MakeSpace(1); // prints extra lines
     int option;
     cout << "\n\nWould you like to enter the information from the keyboard or from another file?\n";
@@ -70,8 +70,7 @@ int main()
        MakeSpace(2);
        cout << "You have chosen to provide info with keyboard" << endl;
        cout << "Seats available: " << SeatsAvailable(seats, rowSize, seatsInEachRow) << "/" << (rowSize * seatsInEachRow) << endl;
-       cout << "What row number would you like on this airline? Choose between 1 <--> " << rowSize << endl;
-       cout << "Enter your desired seat number:--> Format (row number)(seat name)" << endl;
+       cout << "Enter your desired seat number: ";
        //
 
        string seatName = "";
@@ -126,12 +125,13 @@ int main()
        {
            seats[rowNumberIndex][seatNumberIndex] = 'X';
            cout << seatName << " is now taken.\n";
+           printLine(10, '_');
            MakeSpace(2);
            continue;
        }
-       else
+       else if (seats[rowNumberIndex][seatNumberIndex] != 'X')
        {
-           cout << seatName << " has already been taken.\n"
+           cout << seatName << " has already been taken.\n";
        }
        
        
