@@ -122,17 +122,14 @@ int main()
            continue;
        }
        
-       int seatsAvailable = 0;
-       for (int i = 0; i < rowSize; i++) // rows seating
+       for (rowNumberIndex; rowNumberIndex < rowSize; rowNumberIndex++) // rows seating
        {
-           
-           for (int j = 0; j < seatsInEachRow; j++) // columns seating
+           for ( seatNumberIndex; seatNumberIndex < seatsInEachRow; seatNumberIndex++) // columns seating
            {
                // if the value at current index location of rows is NOT 'X', then we increments the seats available
-               if (seats[i][j] != 'X')
+               if (seats[rowNumberIndex][seatNumberIndex] != 'X')
                {
                    
-                   seatsAvailable++;
                }
            }
        }
