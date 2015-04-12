@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include "Persona.h"
-#include "Helper.h"
 
 
 
@@ -93,26 +92,51 @@ int main()
            continue;
        }
        char rowNumber = seatName.at(0); // first component of string
-       if ((rowNumber < '1') || (rowNumber > (rowSize + '4'))) // if the row number goes out of bound
+       int rowNumberIndex = 0;
+       if (('1' <= rowNumber) || (rowNumber <= (rowSize + '4'))) // if the row number goes out of bound
+       {
+           rowNumberIndex = rowNumber - 0x30;
+           rowNumberIndex = rowNumberIndex - 1;
+       }
+       else
        {
            cout << "Row does not exist";
            MakeSpace(2);
            continue;
        }
        char seatNumber = seatName.at(1); // second component of string
-       if (seatNumber < 'A' || seatNumber > (seatNumber + 'D')) // if the seat name goes out of bound for capital letters
+       int seatNumberIndex = 0;
+       if (('A' >= seatNumber) || (seatNumber <= (seatsInEachRow + 'D'))) // if the seat name goes out of bound for capital letters
+       {
+           seatNumberIndex = seatNumber - 0x40;
+           seatNumberIndex = seatNumberIndex -1;
+       }
+       else if (('a' >=seatNumber) || (seatNumber <= (seatsInEachRow + 'd')))  // if the seat name goes out of bound for loawer letters
+       {
+           seatNumberIndex = seatNumber - 0x60;
+       }
+       else
        {
            cout << "Seat name does not exist";
            MakeSpace(2);
            continue;
        }
-       else if (seatNumber < 'a' || seatNumber > (seatNumber + 'b'))  // if the seat name goes out of bound for capital letters
-       {
-           cout << "Seat name does not exist";
-           MakeSpace(2);
-           continue;
-       }
+       
        int seatsAvailable = 0;
+       for (int i = 0; i < rowSize; i++) // rows seating
+       {
+           
+           for (int j = 0; j < seatsInEachRow; j++) // columns seating
+           {
+               // if the value at current index location of rows is NOT 'X', then we increments the seats available
+               if (seats[i][j] != 'X')
+               {
+                   
+                   seatsAvailable++;
+               }
+           }
+       }
+       
        
        
        
