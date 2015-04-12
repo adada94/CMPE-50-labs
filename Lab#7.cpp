@@ -121,27 +121,22 @@ int main()
            continue;
        }
        
-       if (seats[rowNumberIndex][seatNumberIndex] == 'X')
+       if (seats[rowNumberIndex][seatNumberIndex] != 'X')
        {
            seats[rowNumberIndex][seatNumberIndex] = 'X';
-           cout << seatName << " is now taken.\n";
+           cout << "The seat name " << seatName << " is now taken.\n";
+           cout << "Reservation complete";
            printLine(10, '_');
            MakeSpace(2);
            continue;
        }
-       else if (seats[rowNumberIndex][seatNumberIndex] != 'X')
+       else if (seats[rowNumberIndex][seatNumberIndex] == 'X')
        {
-           cout << seatName << " has already been taken.\n";
+           cout << "The seat named " seatName << " has already been taken.\n";
        }
        
        
-//       int rowNumber = 0;
-       
-//       if (option == 1) // option for getting user from keyboard
-//       {
-//           
-//       }
-       //    else if (option == 2) // file IO. getting input from file
+              //    else if (option == 2) // file IO. getting input from file
        //    {
        //        chdir("//users//adish//desktop"); // we change the default directory to the desktop
        //        string filename;
@@ -157,10 +152,10 @@ int main()
 
    }
     
-    input.close(); // close the input stream to the file
+    input.close(); // closing the input stream to the file
     for (int i = 0; i < rowSize; i++)
     {
-        delete seats[i]; // deleting memory for each row
+        delete seats[i]; // deleting the values stored in the array
     }
 
     delete[] seats; // deleting pointers to all rows
