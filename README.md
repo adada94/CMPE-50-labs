@@ -5,7 +5,5 @@ I have also included some helper files so that peope can improve their own proje
 
 For those taking CMPE 50 in SJSU currently (at the time of uploading), please do not copy directly from the lab because it will be considered as cheating. You may base your code off this but do not copy complete lines or portions of the code to avoid cheating. I am being generous and nice to you people so please use this as a reference only. This should help in the future.
 
-This repository should be updated 20 minutes or so to keep the information on this repository current and up-to-date. If not, then that's fine it's just a habit.
-
 
  Have a great day and stay tuned for constant uploads.
